@@ -20,6 +20,7 @@ def main():
     ekart = Ekart(api_key=API_KEY)
     last_event = None
 
+    update = None # value will be assigned in while loop
     while True:
         status = ekart.get_status(ORDER_ID)
         data = json.loads(status)
