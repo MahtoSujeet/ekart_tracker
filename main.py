@@ -34,8 +34,8 @@ def main():
         print(update)
         if update != last_event:
             last_event = update
-            send_msg(text=f"""<b>Update on chess delivery:<b>
-                    {last_event}""")
+            send_msg(text=f"""Update on chess delivery:
+{last_event}""")
 
         time.sleep(15*60)
 
