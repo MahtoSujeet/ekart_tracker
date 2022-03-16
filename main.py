@@ -25,7 +25,12 @@ def main():
         data = json.loads(status)
         print(data)
 
-        update = data.get("data").get("lastEvent")
+        # update = data.get("data").get("lastEvent")
+        try:
+            update = data["data"]["lastEvent"]
+        except KeyError:
+            pass
+
         print(update)
         if update != last_event:
             last_event = update
